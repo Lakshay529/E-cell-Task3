@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UIET Startups</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">E-cell UIET</div>
+    </header>
+
+    <div id="main">
+        <h1>UIET Startups</h1>
+        <p>Explore startups built by students of UIET Kurukshetra</p>
+    </div>
+
+    <div id="controls">
+        <input type="text" id="search-box" placeholder="Search startups..." onkeyup="filterStartups()">
+        <div id="filter-buttons">
+            <button class="filter-btn active" data-category="all" onclick="setFilter('all')">All</button>
+            <button class="filter-btn" data-category="EdTech" onclick="setFilter('EdTech')">EdTech</button>
+            <button class="filter-btn" data-category="EV" onclick="setFilter('EV')">EV</button>
+            <button class="filter-btn" data-category="FinTech" onclick="setFilter('FinTech')">FinTech</button>
+        </div>
+    </div>
+
+    <div id="startup-list" class="startup-list">
+
+        <div class="startup-card" data-category="EdTech">
+            <div class="card-logo">S</div>
+            <h3>StudyMate</h3>
+            <p class="category">EdTech</p>
+            <p>A platform for UIET students to share notes and previous year papers.</p>
+            <a href="#">Visit Website</a>
+        </div>
+
+        <div class="startup-card" data-category="EV">
+            <div class="card-logo">C</div>
+            <h3>CampusRide</h3>
+            <p class="category">EV</p>
+            <p>Electric bicycle sharing system for Kurukshetra University campus.</p>
+            <a href="#">Visit Website</a>
+        </div>
+
+        <div class="startup-card" data-category="FinTech">
+            <div class="card-logo">M</div>
+            <h3>MessPay</h3>
+            <p class="category">FinTech</p>
+            <p>An app to manage hostel mess bills and daily expenses easily.</p>
+            <a href="#">Visit Website</a>
+        </div>
+
+    </div>
+
+    <p id="no-results">No startups match your search.</p>
+
+    <div id="submit-section">
+        <h2>Submit Your Startup</h2>
+        <form id="submit-form" onsubmit="addStartup(event)">
+            <input type="text" id="s-name" placeholder="Startup name" />
+            <select id="s-category">
+                <option value="EdTech">EdTech</option>
+                <option value="EV">EV</option>
+                <option value="FinTech">FinTech</option>
+            </select>
+            <textarea id="s-desc" rows="3" placeholder="Short description..."></textarea>
+            <input type="text" id="s-link" placeholder="Website link (optional)" />
+            <p class="error" id="submit-error"></p>
+            <button type="submit">Add Startup</button>
+        </form>
+    </div>
+
+    <footer>
+        <img src="https://ecelluietkuk.vercel.app/_next/image?url=%2Flogo.png&w=640&q=75" alt="E-cell UIET logo">
+        <div class="details">
+            <p>Entrepreneurship Cell, UIET Kurukshetra</p>
+            <p>Contact: ecell@uietkuk.ac.in</p>
+            <p>&copy; 2026 E-Cell UIET Kurukshetra</p>
+        </div>
+        <div id="contact">
+            <h3>Contact Us</h3>
+            <a href="https://www.instagram.com/ecell_uietkuk/">Instagram Handle</a>
+            <a href="https://www.linkedin.com/company/ecelluietkuk/">Linkedin</a>
+            <a href="https://www.facebook.com/ecelluietku">Facebook</a>
+            <a href="https://twitter.com/ecell_uietkuk" style="font-weight: bold;">X</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
